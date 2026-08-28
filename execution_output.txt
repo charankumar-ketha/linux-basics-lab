@@ -1,0 +1,69 @@
+========================================================
+ Starting DevOps Linux Basics Automated Task Execution 
+========================================================
+
+[Task 1] Creating directory 'test_dir' and managing files...
+Created test_dir/example.txt
+Renamed example.txt -> test_dir/renamed_example.txt
+Verification:
+total 8
+drwxr-xr-x 2 root root 4096 Aug 28 18:40 .
+drwxr-xr-x 3 root root 4096 Aug 28 18:40 ..
+-rw-r--r-- 1 root root    0 Aug 28 18:40 renamed_example.txt
+
+[Task 2.1] Viewing entire /etc/passwd (first 5 lines shown for sanity):
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+
+[Task 2.2] Viewing FIRST 5 lines of /etc/passwd:
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+
+[Task 2.3] Viewing LAST 5 lines of /etc/passwd:
+dnsmasq:x:999:65534:dnsmasq:/var/lib/misc:/usr/sbin/nologin
+charan:x:1000:1000::/home/charan:/bin/sh
+john:x:1001:1001::/home/john:/bin/sh
+ajay:x:1002:1002::/home/ajay:/bin/sh
+avinash:x:1003:1004::/home/avinash:/bin/sh
+
+[Task 3] Grep lines containing 'root' in /etc/passwd:
+root:x:0:0:root:/root:/bin/bash
+
+[Task 4.1] Compressing 'test_dir' to 'test_dir.zip':
+  adding: test_dir/ (stored 0%)
+  adding: test_dir/renamed_example.txt (stored 0%)
+
+[Task 4.2] Extracting 'test_dir.zip' into 'unzipped_dir':
+Archive:  test_dir.zip
+   creating: unzipped_dir/test_dir/
+ extracting: unzipped_dir/test_dir/renamed_example.txt  
+Verification of unzipped_dir:
+total 8
+drwxr-xr-x 2 root root 4096 Aug 28 18:40 .
+drwxr-xr-x 3 root root 4096 Aug 28 18:40 ..
+-rw-r--r-- 1 root root    0 Aug 28 18:40 renamed_example.txt
+
+[Task 5] Downloading file using wget:
+Verification of downloaded file:
+-rw-r--r-- 1 root root 5.9K Aug 28 18:40 sample.txt
+Linux kernel
+============
+
+
+[Task 6] Creating secure.txt and setting read-only for everyone (444):
+Verification of permissions (must be -r--r--r--):
+-r--r--r-- 1 root root 0 Aug 28 18:40 secure.txt
+
+[Task 7] Setting and reading environment variable MY_VAR:
+Verification of MY_VAR:
+MY_VAR = Hello, Linux!
+
+========================================================
+ All tasks executed and verified successfully!          
+========================================================
